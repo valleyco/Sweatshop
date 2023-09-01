@@ -1,6 +1,7 @@
 <?php
+
 namespace Sweatshop\Config;
 
-class Exception extends \RuntimeException{
-	
+class Exception extends \RuntimeException
+{
 }

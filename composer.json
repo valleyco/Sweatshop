@@ -18,19 +18,26 @@
 	    }
 	],
     "require": {
-    	"php": ">=5.3.0",
-        "monolog/monolog": "~1.2",
-        "pimple/pimple" : "3.*",
-        "videlalvaro/php-amqplib": "2.2.*"
-        
+    	"php": ">=7.4.0",
+		"monolog/monolog": "^2.9",
+		"pimple/pimple": "^3.5",
+		"php-amqplib/php-amqplib": "^3.5"
     },
     "suggest" : {
     	"ext-gearman" : "(>1.0) Necessary for Gearman"
     	
     },
+    "scripts" : {
+        "phpstan": "./vendor/phpstan/phpstan/phpstan analyze -l5 ./src",
+        "csfixer" : "./vendor/bin/php-cs-fixer fix"
+    },
     "autoload": {
-        "psr-0": {
-            "Sweatshop": "src/"
+        "psr-4": {
+            "Sweatshop\\": "src/Sweatshop"
         }
-    }
+    },
+	"require-dev": {
+		"phpstan/phpstan": "^1.10",
+		"friendsofphp/php-cs-fixer": "^3.25"
+	}
 }

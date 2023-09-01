@@ -4,3 +4,7 @@
 vendor/
 composer.phar
 .idea
+composer.lock
+.vscode
+DEVSENSE
+.php-cs-fixer.cache
